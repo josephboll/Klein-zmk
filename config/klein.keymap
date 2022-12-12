@@ -17,14 +17,25 @@
 #define SYM  4
 #define MEDIA  5
 #define BLU 6
-
+&kp LALT 0176
 &mt {
   quick-tap-ms = <100>;
   global-quick-tap;
   flavor = "tap-preferred";
   tapping-term-ms = <180>;
 };
-
+    macros {
+        degree_sym: degree_sym {
+            label = "Degree_symbol";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -48,10 +59,10 @@
         nav_layer {
 
             bindings = <
-&trans         &trans         &trans         &trans         &trans              &kp CAPSLOCK   &bt BT_NXT     &kp K_CUT      &kp K_COPY     &kp K_PASTE
+&trans         &trans         &trans         &trans         &trans              &caps_word   &bt BT_NXT     &kp K_CUT      &kp K_COPY     &kp K_PASTE
 &kp LGUI       &kp LALT       &kp LCTRL      &kp LSHFT      &trans              &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &trans
-&trans         &trans         &trans         &trans         &trans              &kp INSERT     &kp HOME       &kp PG_UP      &kp PG_DN      &kp END
-&trans         &trans         &trans         &bootloader                                       &bootloader    &kp RET        &kp BKSP       &kp DEL
+&trans         &trans         &kp K_COFFEE   &trans         &trans              &kp INSERT     &kp HOME       &kp PG_UP      &kp PG_DN      &kp END
+&trans         &trans         &trans         &bootloader                                       &bt BT_CLR    &kp RET        &kp BKSP       &kp DEL
             >;
         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
