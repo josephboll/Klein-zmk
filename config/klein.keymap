@@ -17,7 +17,7 @@
 #define SYM  4
 #define MEDIA  5
 #define BLU 6
-&kp LALT 0176
+
 &mt {
   quick-tap-ms = <100>;
   global-quick-tap;
