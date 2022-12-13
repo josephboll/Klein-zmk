@@ -24,7 +24,7 @@
   flavor = "tap-preferred";
   tapping-term-ms = <180>;
 };
-    macros {
+/{    macros {
         degree_sym: degree_sym {
             label = "Degree_symbol";
             compatible = "zmk,behavior-macro";
@@ -36,6 +36,7 @@
                 ;
         };
     };
+};
 / {
     keymap {
         compatible = "zmk,keymap";
