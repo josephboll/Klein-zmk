@@ -3,6 +3,8 @@ id: klein
 name: klein
 type: shield
 requires: [seeed_xiao]
+exposes:
+  - i2c_oled
 features:
   - keys
   - encoder
