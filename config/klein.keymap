@@ -66,13 +66,13 @@
 
         nav_layer {
             bindings = <
-   &trans    &trans        &trans       &trans  &trans          &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
- &kp LGUI  &kp LALT     &kp LCTRL    &kp LSHFT  &trans            &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
-   &trans    &trans  &kp K_COFFEE       &trans  &trans          &kp INSERT    &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
-   &trans    &trans        &trans  &bootloader                              &bt BT_CLR    &kp RET    &kp BKSP      &kp DEL
+    &trans    &trans        &trans       &trans  &trans          &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
+  &kp LGUI  &kp LALT     &kp LCTRL    &kp LSHFT  &trans            &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
+ &kp LSHFT    &trans  &kp K_COFFEE       &trans  &trans          &kp INSERT    &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
+ &kp LCTRL    &trans        &trans  &bootloader                              &bt BT_CLR    &kp RET    &kp BKSP      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 
         num_layer {
@@ -83,7 +83,7 @@
  &kp PERIOD  &kp N0  &kp MINUS  &bootloader                             &bootloader     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         fun_layer {
@@ -128,6 +128,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        Layer__7 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
