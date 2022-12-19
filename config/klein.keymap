@@ -40,7 +40,7 @@
             tap-ms = <5>;
             wait-ms = <5>;
         };
-        new_macro: new_macro {
+        C_A_D: C_A_D {
             compatible = "zmk,behavior-macro";
             label = "new_macro";
             #binding-cells = <0>;
@@ -75,10 +75,10 @@
 
         nav_layer {
             bindings = <
-    &trans    &trans        &trans       &trans  &trans          &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
-  &kp LGUI  &kp LALT     &kp LCTRL    &kp LSHFT  &trans            &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
- &kp LSHFT    &trans  &kp K_COFFEE       &trans  &trans          &kp INSERT    &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
- &kp LCTRL    &trans        &trans  &bootloader                              &bt BT_CLR    &kp RET    &kp BKSP      &kp DEL
+    &trans    &trans     &trans       &trans  &trans          &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
+  &kp LGUI  &kp LALT  &kp LCTRL    &kp LSHFT  &trans            &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
+ &kp LSHFT    &trans  &kp LC(L)       &trans  &C_A_D          &kp INSERT    &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
+ &kp LCTRL    &trans     &trans  &bootloader                              &bt BT_CLR    &kp RET    &kp BKSP      &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
