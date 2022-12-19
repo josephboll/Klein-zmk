@@ -40,6 +40,15 @@
             tap-ms = <5>;
             wait-ms = <5>;
         };
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(LCTRL) &kp DEL>,
+                <&macro_release>;
+        };
     };
 };
 
