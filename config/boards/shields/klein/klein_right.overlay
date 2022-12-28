@@ -37,14 +37,19 @@
     ch0-pin = <45>;
     ch0-inverted; 
 };
+
 / {
     backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";
         pwm_led_0 {
-            pwms = <&pwm0 26>;
-            label = "Backlight LED 0";
+            pwms = <&pwm0 26>; label = "Backlight LED RED";
+        };
+        pwm_led_1 {
+            pwms = <&pwm0 30>; label = "Backlight LED GRN";
+        };
+        pwm_led_2 {
+            pwms = <&pwm0 6>; label = "Backlight LED BLU";
         };
     };
-};    
-
+};
