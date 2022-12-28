@@ -15,3 +15,19 @@
         , <&xiao_d 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
+
+&pwm0 {
+    status = "okay";
+    ch0-pin = <26>;
+    ch0-inverted;
+};
+/ {
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        label = "Backlight LEDs";
+        pwm_led_0 {
+            pwms = <&pwm0 26>;
+            label = "Backlight LED 0";
+        };
+    };
+};
