@@ -22,7 +22,7 @@
     ch0-pin = <26>; /* LED RED */
     ch1-pin = <30>; /* LED GRN */
     ch2-pin = <6>;  /* LED BLU */
-    
+};    
 / {
     backlight: pwmleds {
         compatible = "pwm-leds";
