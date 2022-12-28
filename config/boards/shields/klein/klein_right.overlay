@@ -32,5 +32,14 @@
     ch2-pin = <6>;  /* LED BLU */
     
 };
-    
+/ {
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        label = "Backlight LEDs";
+        pwm_led_0 {
+            pwms = <&pwm0 26>;
+            label = "Backlight LED 0";
+        };
+    };
+};    
 
