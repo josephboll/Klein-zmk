@@ -82,7 +82,7 @@
  &kp LCTRL    &trans     &trans  &trans                                   &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         num_layer {
@@ -93,7 +93,7 @@
  &kp PERIOD  &kp N0  &kp MINUS  &bootloader                             &bootloader     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW &inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         fun_layer {
@@ -104,7 +104,7 @@
  &kp ESC  &kp SPACE  &kp TAB  &bootloader                                   &bootloader     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         sym_layer {
@@ -115,7 +115,7 @@
    &kp LS(PERIOD)  &kp LS(N0)  &kp LS(MINUS)  &bootloader                                 &bootloader     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         media_layer {
@@ -126,7 +126,7 @@
    &trans    &trans     &trans  &bootloader                               &bootloader   &kp K_STOP2    &kp K_PP  &kp K_MUTE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         blu_layer {
@@ -137,7 +137,7 @@
  &trans        &trans        &trans        &trans                                  &trans      &trans  &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         Layer__7 {
