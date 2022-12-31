@@ -15,6 +15,7 @@
 #define SYM  4
 #define MEDIA  5
 #define BLU 6
+#define NUMPAD 7
 
 &mt {
     quick-tap-ms = <100>;
