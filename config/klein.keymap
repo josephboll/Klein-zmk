@@ -36,10 +36,10 @@
             //                      | ESC  | SPC |  TAB | BOOTLOADER |                         | BOOTLOADER | RET | BKSP | DEL |
 
             bindings = <
-      &kp Q        &kp W        &kp E          &kp R   &kp T           &kp Y        &kp U        &kp I       &kp O         &kp P
- &mt LGUI A   &mt LALT S  &mt LCTRL D    &mt LSHFT F   &kp G           &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
-      &kp Z        &kp X        &kp C          &kp V   &kp B           &kp N        &kp M    &kp COMMA     &kp DOT      &kp FSLH
-  &lt 7 ESC  &lt 1 SPACE    &lt 6 TAB  &kp C_AL_LOCK                           &kp K_MUTE    &lt 4 RET  &lt 2 BKSP     &lt 3 DEL
+          &kp Q          &kp W        &kp E          &kp R   &kp T                       &kp Y        &kp U         &kp I        &kp O         &kp P
+     &mt LGUI A     &mt LALT S  &mt LCTRL D    &mt LSHFT F   &kp G                       &kp H  &mt RSHFT J   &mt RCTRL K   &mt RALT L  &mt LGUI SQT
+          &kp Z          &kp X        &kp C          &kp V   &kp B                       &kp N        &kp M     &kp COMMA      &kp DOT      &kp FSLH
+ &lt NUMPAD ESC  &lt NAV SPACE  &lt BLU TAB  &kp C_AL_LOCK                                       &kp K_MUTE   &lt SYM RET &lt NUM BKSP   &lt FUN DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -118,6 +118,8 @@
     &kp     &kp     &kp     &kp     &kp          &kp KP_N1   &kp KP_N2  &kp KP_N3           &kp           &kp
     &kp     &kp     &kp     &kp                             &kp KP_DOT  &kp KP_N0  &kp KP_ENTER  &kp KP_EQUAL
             >;
+            
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
