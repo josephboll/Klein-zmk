@@ -42,7 +42,7 @@
  &lt NUMPAD ESC  &lt NAV SPACE  &lt BLU TAB  &kp C_AL_LOCK                                       &kp K_MUTE   &lt SYM RET &lt NUM BKSP   &lt FUN DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         nav_layer {
@@ -53,7 +53,7 @@
    &trans    &trans     &trans  &bootloader                              &bootloader    &kp RET  &kp BACKSPACE      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         num_layer {
@@ -64,7 +64,7 @@
  &kp PERIOD  &kp N0  &kp MINUS  &bootloader                                &bootloader  &kp KP_N0       &kp       &kp
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LS(Z)) LC(Z)>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         fun_layer {
