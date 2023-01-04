@@ -94,5 +94,5 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                 RC(3,6) RC(3,7) 
 &pwm0 {
     status = "okay";
     ch0-pin = <45>;
-    /* ch0-inverted; */
+    ch0-inverted;
 };
