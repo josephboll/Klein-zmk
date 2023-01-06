@@ -16,6 +16,10 @@
         ;
 };
 
+&left_encoder {
+    status = "okay";
+};
+
 &pwm0 {
     status = "okay";
     /* Red LED P0_26 or D11, Green LED P0_30 or D12, Blue LED P0_6 or D13 */
