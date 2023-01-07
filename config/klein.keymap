@@ -97,7 +97,7 @@
         compatible = "zmk,combos";
 
         combo_capslock {
-            bindings = <&kt CAPS>;
+            bindings = <&kp CAPS>;
             key-positions = <13 16>;
             layers = <0>;
         };
