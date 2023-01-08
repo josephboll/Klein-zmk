@@ -164,7 +164,7 @@
                                         &kp LS(PERIOD)     &kp LS(N0)  &kp LS(MINUS)  &bootloader  &bootloader     &trans    &trans    &trans
             >;
 
-            sensor-bindings = sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         media_layer {
