@@ -131,7 +131,7 @@
                                  &kp LCTRL  &trans  &trans  &bootloader  &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LEFT RIGHT>;
+            sensor-bindings = <&inc_dec_kp UP DN &inc_dec_kp LEFT RIGHT>;
             };
 
         num_layer {
