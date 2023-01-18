@@ -125,14 +125,14 @@
 
         nav_layer {
             bindings = <
-    &trans    &trans     &trans     &trans  &trans           &kp CAPS  &bt BT_NXT  &kp LC(X)  &kp LC(C) &kp LC(V)
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans             &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
- &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D                       &kp INSERT   &kp HOME   &kp PG_UP    &kp PG_DN  &kp END
-                                 &kp LCTRL  &trans  &trans  &bootloader  &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
+    &trans    &trans     &trans     &trans  &trans                                                &kp CAPS    &bt BT_NXT  &kp LC(X)  &kp LC(C)  &kp LC(V)
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT  &trans
+ &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D                                                &kp INSERT  &kp HOME    &kp PG_UP  &kp PG_DN  &kp END
+                                 &kp LCTRL  &trans  &trans  &bootloader  &bt BT_CLR    &kp RET    &kp BSPC    &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
-            };
+        };
 
         num_layer {
             bindings = <
