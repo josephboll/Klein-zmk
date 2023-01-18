@@ -96,8 +96,8 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_capslock {
-            bindings = <&kp CAPS>;
+        combo_capsword {
+            bindings = <&caps_word>;
             key-positions = <13 16>;
             layers = <0>;
         };
@@ -114,10 +114,10 @@
             //                      | ESC  | SPC  |  TAB | C/A/D |                            | MUTE |  RET |  BKSP |  DEL |
 
             bindings = <
-      &kp Q       &kp W        &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I       &kp O   &mt PSCRN P
- &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G              &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
+      &kp Q       &kp W        &kp E        &kp R        &kp T                           &kp Y  &kp U        &kp I       &kp O   &mt PSCRN P
+ &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G                           &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
       &kp Z       &kp X        &kp C        &kp V        &kp B                           &kp N        &kp M   &kp COMMA       &kp DOT  &kp FSLH
-              &lt 7 ESC  &lt 1 SPACE  &lt 6 TAB  &mt &bootloader &C_A_D   &kp C_MUTE    &lt 4 RET  &lt 2 BSPC     &lt 3 DEL
+              &lt 7 ESC  &lt 1 SPACE  &lt 6 TAB  &mt &bootloader &C_A_D &mt &bootloader &kp C_MUTE    &lt 4 RET  &lt 2 BSPC     &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -125,13 +125,13 @@
 
         nav_layer {
             bindings = <
-    &trans    &trans     &trans     &trans  &trans           &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
+    &trans    &trans     &trans     &trans  &trans           &kp CAPS  &bt BT_NXT  &kp LC(kp X)  &kp LC(kp C) &kp LC(kp V)
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans             &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
  &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D                       &kp INSERT   &kp HOME   &kp PG_UP    &kp PG_DN  &kp END
                                  &kp LCTRL  &trans  &trans  &bootloader  &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LEFT RIGHT>;
             };
 
         num_layer {
@@ -180,10 +180,10 @@
 
         blu_layer {
             bindings = <
- &trans        &trans        &trans        &trans  &trans          &bt BT_CLR      &trans      &trans  &bl BL_INC  &out OUT_TOG
- &trans  &bt BT_SEL 3  &bt BT_SEL 4        &trans  &trans              &trans  &bt BT_PRV  &bt BT_NXT  &bl BL_TOG        &trans
- &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                          &trans      &trans      &trans    &bl BL_DEC  &trans
-                                           &trans  &trans  &trans      &trans      &trans      &trans      &trans        &trans
+ &trans        &trans        &trans        &trans  &trans                 &bt BT_CLR &trans      &trans      &bl BL_INC  &out OUT_TOG
+ &trans  &bt BT_SEL 3  &bt BT_SEL 4        &trans  &trans                 &trans     &bt BT_PRV  &bt BT_NXT  &bl BL_TOG  &trans
+ &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                 &trans     &trans      &trans      &bl BL_DEC  &trans
+                                   &trans  &trans  &trans  &trans &trans  &trans     &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -191,10 +191,10 @@
 
         PAD_LAYER {
             bindings = <
-   &trans    &trans     &trans     &trans  &trans          &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS          &kp KP_MULTIPLY
- &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans          &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS            &kp KP_DIVIDE
-   &trans    &trans     &trans     &trans  &trans                        &kp KP_N1   &kp KP_N2     &kp KP_N3  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS
-                                   &trans  &trans  &trans     &trans  &kp KP_ENTER  &kp KP_DOT     &kp KP_N0                &kp EQUAL
+   &trans    &trans     &trans     &trans  &trans          &kp KP_N7     &kp KP_N8   &kp KP_N9  &kp KP_PLUS              &kp KP_MULTIPLY
+ &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans          &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS             &kp KP_DIVIDE
+   &trans    &trans     &trans     &trans  &trans          &kp KP_N1     &kp KP_N2   &kp KP_N3  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS
+                                   &trans  &trans  &trans     &trans  &kp KP_ENTER  &kp KP_DOT  &kp KP_N0  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
