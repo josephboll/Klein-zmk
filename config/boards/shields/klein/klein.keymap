@@ -97,7 +97,7 @@
         compatible = "zmk,combos";
 
         combo_capslock {
-            bindings = <&kp CAPS>;
+            bindings = <&caps_word>;
             key-positions = <13 16>;
             layers = <0>;
         };
@@ -125,10 +125,10 @@
 
         nav_layer {
             bindings = <
-    &trans    &trans     &trans     &trans  &trans           &caps_word  &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans             &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT       &trans
- &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D                       &kp INSERT   &kp HOME   &kp PG_UP    &kp PG_DN  &kp END
-                                 &kp LCTRL  &trans  &trans  &bootloader  &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
+    &trans    &trans     &trans     &trans  &trans             &kp CAPS    &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans             &kp LEFT      &kp DOWN     &kp UP   &kp RIGHT       &trans
+ &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D           &kp INSERT      &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
+                                 &kp LCTRL  &trans  &trans  &bootloader    &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
