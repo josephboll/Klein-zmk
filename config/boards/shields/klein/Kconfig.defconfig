@@ -29,25 +29,6 @@ endif # ZMK_DISPLAY
 
 if LVGL
 
-
-
-
-
-
-
-config LVGL_VDB_SIZE
-	default 64
-
-
-
-
-config LVGL_BITS_PER_PIXEL
-	default 1
-
-
-
-
-
 endif # LVGL
 
 if ZMK_BACKLIGHT
