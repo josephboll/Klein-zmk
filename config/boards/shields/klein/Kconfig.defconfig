@@ -32,8 +32,8 @@ if LVGL
 
 
 
-config LVGL_VER_RES
-	default 64
+
+
 
 config LVGL_VDB_SIZE
 	default 64
