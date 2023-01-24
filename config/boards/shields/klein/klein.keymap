@@ -146,7 +146,7 @@
               &lt PAD ESC  &lt NAV SPACE  &lt BLU TAB  &gqt &bootloader LC(LA(DEL))   &gqt &bootloader C_MUTE    &lt SYM RET  &lt NUM BSPC     &lt FUN DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp &kp UP &kp DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
