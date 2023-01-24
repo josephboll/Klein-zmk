@@ -27,6 +27,7 @@
     tapping-term-ms = <180>;
 };
 
+
 / {
     macros {
         degree_sym: degree_sym {
@@ -102,12 +103,35 @@
             layers = <0>;
         };
     };
-
+/ {
+    behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-        label = "QWERTY";
+        label = " QWERTY";
             //          ------------------------------------------------------------------------------------------------------------
             //          |  Q  |  W  |  E   |  R   |  T   |                                           |  Y   |  U    |  I    |  O   |   P   |
             //          |  A  |  S  |  D   |  F   |  G   |                                           |  H   |  J    |  K    |  L   |   '   |
@@ -115,19 +139,19 @@
             //                      | ESC  | SPC  |  TAB | C/A/D |                            | MUTE |  RET |  BKSP |  DEL |
 
             bindings = <
-      &kp Q       &kp W        &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I       &kp O   &mt PSCRN P
- &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G              &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
-      &kp Z       &kp X        &kp C        &kp V        &kp B                           &kp N        &kp M   &kp COMMA       &kp DOT  &kp FSLH
-              &lt 7 ESC  &lt 1 SPACE  &lt 6 TAB  &mt &bootloader LC(LA(DEL))   &mt &bootloader C_MUTE    &lt 4 RET  &lt 2 BSPC     &lt 3 DEL
+      &kp Q       &kp W        &kp E        &kp R        &kp T                       &kp Y        &kp U        &kp I       &kp O   &gqt PSCRN P
+ &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G                       &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
+      &kp Z       &kp X        &kp C        &kp V        &kp B                       &kp N        &kp M   &kp COMMA       &kp DOT  &kp FSLH
+              &lt PAD ESC  &lt NAV SPACE  &lt BLU TAB  &gqt &bootloader LC(LA(DEL))   &gqt &bootloader C_MUTE    &lt SYM RET  &lt NUM BSPC     &lt FUN DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp UP DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
-            label = "NAV";
+            label = " NAV";
             bindings = <
-    &trans    &trans     &trans     &trans  &trans             &kp CAPS    &bt BT_NXT  &kp K_CUT  &kp K_COPY  &kp K_PASTE
+    &trans    &trans     &trans     &trans  &trans             &kp CAPS    &bt BT_NXT  &kp LC(X)  &kp LC(C)  &kp LC(V)
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans             &kp LEFT      &kp DOWN     &kp UP   &kp RIGHT       &trans
  &kp LSHFT    &trans  &kp LC(L)     &trans  &C_A_D           &kp INSERT      &kp HOME  &kp PG_UP   &kp PG_DN      &kp END
                                  &kp LCTRL  &trans  &trans  &bootloader    &bt BT_CLR    &kp RET    &kp BSPC      &kp DEL
@@ -137,7 +161,7 @@
             };
 
         num_layer {
-            label = "NUMBERS";
+            label = " #12345";
             bindings = <
   &kp LBKT  &kp N7  &kp N8      &kp N9   &kp RBKT                  &trans       &trans     &trans    &trans    &trans
   &kp SEMI  &kp N4  &kp N5      &kp N6  &kp EQUAL                  &trans    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -149,7 +173,7 @@
         };
 
         fun_layer {
-            label = "FUNC";
+            label = " FUNC";
             bindings = <
  &kp F12  &kp F7  &kp F8   &kp F9        &kp PSCRN                &trans       &trans     &trans    &trans    &trans
  &kp F11  &kp F4  &kp F5   &kp F6       &kp SYSREQ                &trans    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -161,7 +185,7 @@
         };
 
         sym_layer {
-            label = "!@#%&#";
+            label = " !@#%&#";
             bindings = <
   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)      &kp LS(N9)   &kp LS(RBKT)                 &degree_sym       &trans     &trans    &trans    &trans
   &kp LS(SEMI)  &kp LS(N4)  &kp LS(N5)      &kp LS(N6)  &kp LS(EQUAL)                         &TM    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -173,7 +197,7 @@
         };
 
         media_layer {
-            label = "MEDIA";
+            label = " MEDIA";
             bindings = <
    &trans    &trans     &trans     &trans  &trans               &trans        &trans        &trans      &trans      &trans
  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans           &kp K_PREV  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_NEXT      &trans
@@ -185,7 +209,7 @@
         };
 
         blu_layer {
-            label = "BLUETOOTH";
+            label = " BT";
             bindings = <
  &trans        &trans        &trans        &trans  &trans          &bt BT_CLR      &trans      &trans  &bl BL_INC  &out OUT_TOG
  &trans  &bt BT_SEL 3  &bt BT_SEL 4        &trans  &trans              &trans  &bt BT_PRV  &bt BT_NXT  &bl BL_TOG        &trans
@@ -197,6 +221,7 @@
         };
 
         PAD_LAYER {
+            label = " NUMPAD";
             bindings = <
    &trans    &trans     &trans     &trans  &trans          &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS          &kp KP_MULTIPLY
  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans          &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS            &kp KP_DIVIDE
