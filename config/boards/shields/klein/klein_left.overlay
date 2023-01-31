@@ -28,19 +28,6 @@
     ch2-pin = <6>;  /* LED BLU */
 }; 
 
-/* &pwm1 {
-*    status = "okay";
-*    /* Red LED P0_26 or D11, Green LED P0_30 or D12, Blue LED P0_6 or D13 */
-*    ch1-pin = <30>; /* LED GRN */
-* };   
-*
-* &pwm2 {
-*    status = "okay";
-*    /* Red LED P0_26 or D11, Green LED P0_30 or D12, Blue LED P0_6 or D13 */
-*    ch2-pin = <6>;  /* LED BLU */
-* };   
-*/
-
 / {
     backlight: pwmleds {
         compatible = "pwm-leds";
