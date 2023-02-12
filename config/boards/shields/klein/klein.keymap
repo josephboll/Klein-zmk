@@ -19,6 +19,7 @@
 #define MEDIA  5
 #define BLU 6
 #define PAD 7
+#define PS 8
 
 &mt {
     quick-tap-ms = <100>;
@@ -224,13 +225,25 @@
         PAD_LAYER {
             label = " NUMPAD";
             bindings = <
-   &trans    &trans     &trans     &trans  &trans          &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS          &kp KP_MULTIPLY
- &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans          &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS            &kp KP_DIVIDE
-   &trans    &trans     &trans     &trans  &trans                        &kp KP_N1   &kp KP_N2     &kp KP_N3  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS
-                                   &trans  &trans  &trans     &trans  &kp KP_ENTER  &kp KP_DOT     &kp KP_N0                &kp EQUAL
+   &trans    &trans     &trans     &trans  &trans                            &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS  &kp KP_MULTIPLY
+ &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                            &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS  &kp KP_DIVIDE
+   &trans    &trans     &trans     &trans  &trans                            &kp KP_N1     &kp KP_N2   &kp KP_N3  &kp LS(N9)    &kp LS(N0)
+                                   &trans  &trans  &trans    &trans  &kp KP_ENTER  &kp KP_DOT &kp KP_N0  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+        
+        PS_LAYER {
+            label = " PhotoShop";
+            bindings = <
+ &kp LALT    &kp W       &kp E        &kp R        &kp T                        &kp Y        &kp U         &kp I       &kp O  &gqt PSCRN P
+ &kp LSHFT   &kp S       &kp D        &kp F        &kp G                        &kp H  &mt RSHFT J   &mt RCTRL K  &mt RALT L  &mt LGUI SQT
+ &kp LCTRL   &kp LCTL(X) &kp LCTL(C)  &kp LCTL(V) &trans                        &kp N        &kp M     &kp COMMA     &kp DOT  &kp FSLH
+                                &trans  &trans  &trans  &kp LCTL(Z)  &kp KP_ENTER  &kp KP_DOT  &kp KP_N0  &kp EQUAL
+            >;
+
+            sensor-bindings = <&inc_dec_kp  LBKT RBKT &inc_dec_kp LS(LBKT) LS(RBKT)  >;
         };
     };
 };
