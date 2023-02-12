@@ -16,10 +16,10 @@
 #define NUM  2
 #define FUN  3
 #define SYM  4
-#define MEDIA  5
-#define BLU 6
-#define PAD 7
-#define PS 8
+#define PS   5
+#define BLU  6
+#define PAD  7
+
 
 &mt {
     quick-tap-ms = <100>;
@@ -144,7 +144,7 @@
       &kp Q       &kp W        &kp E        &kp R        &kp T                       &kp Y        &kp U        &kp I       &kp O   &gqt PSCRN P
  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G                       &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
       &kp Z       &kp X        &kp C        &kp V        &kp B                       &kp N        &kp M   &kp COMMA       &kp DOT  &kp FSLH
-              &lt PAD ESC  &lt NAV SPACE  &lt BLU TAB  &gqt &reset LC(LA(DEL))   &gqt &reset C_MUTE    &lt SYM RET  &lt NUM BSPC     &lt FUN DEL
+              &lt PAD ESC  &lt NAV SPACE  &lt BLU TAB  &gqt &reset LC(LA(DEL))   &gqt &reset C_MUTE    &lt SYM RET  &lt NUM BSPC     &lt PS DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -198,25 +198,25 @@
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        media_layer {
-            label = " MEDIA";
+        PS_LAYER {
+            label = " PhotoShop";
             bindings = <
-   &trans    &trans     &trans     &trans  &trans               &trans        &trans        &trans      &trans      &trans
- &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans           &kp K_PREV  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_NEXT      &trans
-   &trans    &trans     &trans     &trans  &trans                             &trans        &trans      &trans      &trans  &trans
-                                   &trans  &trans  &trans  &bootloader   &bootloader   &kp K_STOP2    &kp K_PP  &kp K_MUTE
+   &kp LALT    &kp W       &kp E        &kp R        &kp T               &trans        &trans        &trans      &trans      &trans
+   &kp LSHFT   &kp S       &kp D        &kp F        &kp G               &kp K_PREV  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_NEXT      &trans
+    &kp LCTRL   &kp LC(X) &kp LC(C)  &kp LC(V) &kp B                     &trans        &trans      &trans      &trans  &trans
+                                   &trans  &trans  &tog Base  &kp LCTL(Z)  &bootloader   &kp K_STOP2    &kp K_PP  &kp K_MUTE
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp  LBKT RBKT &inc_dec_kp LS(LBKT) LS(RBKT)>;
+            /*sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;*/
         };
 
         blu_layer {
             label = " BT";
             bindings = <
- &trans        &trans        &trans        &trans  &trans          &bt BT_CLR      &trans      &trans  &bl BL_INC  &out OUT_TOG
- &trans  &bt BT_SEL 3  &bt BT_SEL 4        &trans  &trans              &trans  &bt BT_PRV  &bt BT_NXT  &bl BL_TOG        &trans
- &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans              &trans      &trans      &trans    &bl BL_DEC  &trans
-                                           &trans  &trans  &trans      &trans      &trans      &trans      &trans        &trans
+ &trans        &trans        &trans        &trans  &trans                           &bt BT_CLR      &trans      &trans  &bl BL_INC  &out OUT_TOG
+ &trans  &bt BT_SEL 3  &bt BT_SEL 4        &trans  &trans                               &trans  &bt BT_PRV  &bt BT_NXT  &bl BL_TOG    &trans
+ &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                               &trans      &trans      &trans    &bl BL_DEC  &trans
+                                           &trans  &trans &trans &trans      &trans  &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -232,18 +232,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
-        };
-        
-        PS_LAYER {
-            label = " PhotoShop";
-            bindings = <
- &kp LALT    &kp W       &kp E        &kp R        &kp T                        &kp Y        &kp U         &kp I       &kp O  &gqt PSCRN P
- &kp LSHFT   &kp S       &kp D        &kp F        &kp G                        &kp H  &mt RSHFT J   &mt RCTRL K  &mt RALT L  &mt LGUI SQT
- &kp LCTRL   &kp LCTL(X) &kp LCTL(C)  &kp LCTL(V) &trans                        &kp N        &kp M     &kp COMMA     &kp DOT  &kp FSLH
-                                &trans  &trans  &trans  &kp LCTL(Z)  &kp KP_ENTER  &kp KP_DOT  &kp KP_N0  &kp EQUAL
-            >;
-
-            sensor-bindings = <&inc_dec_kp  LBKT RBKT &inc_dec_kp LS(LBKT) LS(RBKT)  >;
         };
     };
 };
