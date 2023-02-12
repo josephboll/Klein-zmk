@@ -1,22 +1,13 @@
 manifest:
   remotes:
-      # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-      # for dual encoders
     - name: infused-kim
       url-base: https://github.com/infused-kim
-      # bravekarma
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
   projects:
-   - name: zmk
+    - name: zmk
       remote: infused-kim
       revision: my-changes/split-encoder
-      import: app/west.yml
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
       import: app/west.yml
   self:
     path: config
