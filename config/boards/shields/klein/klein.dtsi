@@ -77,7 +77,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                 RC(3,6) RC(3,7) 
         height = <64>;
         segment-offset = <0>;
         page-offset = <0>;
-        display-offset = <1>;
+        display-offset = <10>;
         multiplex-ratio = <63>;
         prechargep = <0x22>;
     };
