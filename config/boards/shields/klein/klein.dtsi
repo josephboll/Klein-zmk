@@ -86,6 +86,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                 RC(3,6) RC(3,7) 
 / {
     chosen {
         zmk,backlight = &backlight;
+	zephyr,display = &oled;
     };
 };
 
