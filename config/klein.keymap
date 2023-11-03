@@ -227,8 +227,8 @@
             bindings = <
    &trans    &trans     &trans     &trans  &trans                            &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS  &kp KP_MULTIPLY
  &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                            &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS  &kp KP_DIVIDE
-   &trans    &trans     &trans     &trans  &trans                            &kp KP_N1     &kp KP_N2   &kp KP_N3  &kp LS(N9)    &kp LS(N0)
-                                   &trans  &trans  &trans    &trans  &kp KP_ENTER  &kp KP_DOT &kp KP_N0  &kp EQUAL
+   &trans    &trans     &trans     &trans  &trans                            &kp KP_N1     &kp KP_N2   &kp KP_N3  &trans       &kp EQUAL
+                                   &trans  &trans  &trans    &trans   &trans  &kp KP_ENTER  &kp KP_DOT &kp KP_N0
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
