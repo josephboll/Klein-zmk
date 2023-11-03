@@ -228,7 +228,7 @@
     &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)                            &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS  &kp KP_MULTIPLY
     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)                           &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MINUS  &kp KP_DIVIDE
  &kp LS(BSLH)  &kp LBKT   &kp RBKT   &kp LS(LBKT) &kp LS(RBKT)                            &kp KP_N1     &kp KP_N2   &kp KP_N3  &trans       &kp EQUAL
-                                   &trans  &trans  &trans    &trans   &trans  &kp KP_ENTER  &kp KP_DOT &kp KP_N0
+                                   &trans  &kp TILDE  &trans    &trans   &trans  &kp KP_ENTER  &kp KP_DOT &kp KP_N0
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
