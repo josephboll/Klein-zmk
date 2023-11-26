@@ -13,9 +13,9 @@
 #
 
 include:
-  - board: seeeduino_xiao_ble
+  - board: adafruit_kb2040
     shield: klein_left
-  - board: seeeduino_xiao_ble
+  - board: adafruit_kb2040
     shield: klein_right
-  - board: seeeduino_xiao_ble
+  - board: adafruit_kb2040
     shield: settings_reset
