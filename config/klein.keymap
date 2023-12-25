@@ -5,9 +5,15 @@
  */
 
 #include <behaviors.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h> 
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
 
 
 #define BASE 0
@@ -143,7 +149,7 @@
       &kp Q       &kp W        &kp E        &kp R        &kp T                       &kp Y        &kp U        &kp I       &kp O   &gqt PSCRN P
       &kp A  &mt LALT S  &mt LCTRL D  &mt LSHFT F        &kp G                       &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt LGUI SQT
       &kp Z       &kp X        &kp C        &kp V        &kp B                       &kp N        &kp M   &kp COMMA       &kp DOT  &kp FSLH
-              &lt BLU TAB &lt PAD ENTER &lt NAV SPACE &lt PAD ENTER  &gqt &reset LC(LA(DEL))   &gqt &reset C_MUTE &lt SYM ESC  &lt NUM BSPC     &lt PS DEL
+              &lt BLU TAB  &lt NAV SPACE  &lt PAD ENTER  &gqt &reset LC(LA(DEL))   &gqt &reset C_MUTE &lt SYM ESC  &lt NUM BSPC     &lt PS DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -234,7 +240,3 @@
         };
     };
 };
- 
-    };
-};
- 
